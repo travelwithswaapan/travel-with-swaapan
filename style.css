@@ -56,9 +56,9 @@ h2 {
 .vlog-list {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 60px;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 10px;
 }
 
 .vlog img {
@@ -102,7 +102,7 @@ h2 {
 
 /* About Section */
 #about {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0);
   margin: 15px;
   padding: 15px;
   border-radius: 7px;
