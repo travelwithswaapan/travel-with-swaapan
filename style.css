@@ -52,13 +52,11 @@ h2 {
   text-shadow: 2px 2px 5px black;
 }
 
-/* Vlog Thumbnails */
-.vlog-list {
+.vlog-container {
   display: flex;
-  justify-content: flex-start; /* Align items to the left */
-  gap: 60px;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 10px;
+  gap: 20px;
 }
 
 
