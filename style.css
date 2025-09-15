@@ -19,7 +19,7 @@ header {
   text-align: center;
   padding: 30px 20px;
   background: rgba(255, 0, 0, 0.8);
-  border-bottom: 4px solid yellow;
+  border-bottom: 8px solid yellow;
 }
 
 header h1 {
@@ -47,7 +47,7 @@ nav a:hover {
 /* Section Titles */
 h2 {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 2rem;
   text-shadow: 2px 2px 5px black;
 }
@@ -107,7 +107,7 @@ h2 {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 /* Footer */
@@ -115,7 +115,7 @@ footer {
   text-align: center;
   padding: 20px;
   background: rgba(255, 0, 0, 0.8);
-  border-top: 4px solid yellow;
+  border-top: 8px solid yellow;
 }
 
 .social-icons {
