@@ -1,69 +1,56 @@
-/* Body with Snowy Himalayas Background */
+/* Background with brightness + contrast */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470") no-repeat center center fixed;
   background-size: cover;
+  filter: brightness(0.85) contrast(1.2);
   color: white;
 }
 
-/* Dark overlay for readability */
+/* Overlay */
 .overlay {
-  background: rgba(0, 0, 0, 0.6);
-  min-height: 100vh;
-  padding: 0;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 20px;
 }
 
 /* Header */
 header {
+  background: linear-gradient(to right, red, orange, yellow);
   text-align: center;
-  padding: 30px 20px;
-  background: rgba(255, 0, 0, 0.8);
-  border-bottom: 8px solid yellow;
+  padding: 20px;
+  color: white;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin: 10px 0;
+  font-size: 28px;
 }
 
 nav a {
   margin: 0 15px;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: yellow;
+  text-decoration: underline;
 }
 
-/* Section Titles */
-h2 {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 2rem;
-  text-shadow: 2px 2px 5px black;
-}
-
-.vlog-container {
+/* Vlogs Section - center thumbnails */
+.vlog-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  text-align: center;
 }
 
-
 .vlog img {
-  width: 280px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  width: 300px;
+  border-radius: 10px;
+  border: 3px solid yellow;
   transition: transform 0.3s;
 }
 
@@ -72,63 +59,64 @@ h2 {
 }
 
 .vlog h3 {
-  text-align: center;
   margin-top: 10px;
+  color: yellow;
 }
 
 /* Subscribe Button */
 .subscribe {
   text-align: center;
-  margin: 30px 0;
+  margin-top: 30px;
 }
 
 .subscribe a {
   background: red;
+  padding: 15px 25px;
   color: white;
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 1.4rem;
+  font-size: 20px;
   font-weight: bold;
+  border-radius: 8px;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
-  transition: background 0.3s, transform 0.3s;
 }
 
 .subscribe a:hover {
   background: darkred;
-  transform: scale(1.1);
 }
 
 /* About Section */
 #about {
-  background: rgba(0,0,0,0);
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 20px auto;
+  padding: 15px 20px;
+  max-width: 700px;
+  border-radius: 8px;
   text-align: center;
-  font-size: 1.4rem;
+}
+
+#about h2 {
+  font-size: 22px;
+}
+
+#about p {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 /* Footer */
 footer {
+  background: linear-gradient(to right, yellow, orange, red);
   text-align: center;
-  padding: 20px;
-  background: rgba(255, 0, 0, 0.8);
-  border-top: 8px solid yellow;
-}
-
-.social-icons {
-  margin: 15px 0;
+  padding: 15px;
+  color: black;
+  font-weight: bold;
 }
 
 .social-icons a {
-  color: white;
   margin: 0 10px;
-  font-size: 1.8rem;
-  transition: transform 0.3s, color 0.3s;
+  font-size: 24px;
+  color: black;
 }
 
 .social-icons a:hover {
-  transform: scale(1.2);
-  color: yellow;
+  color: red;
 }
