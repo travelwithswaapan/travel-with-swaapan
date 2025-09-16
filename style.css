@@ -1,10 +1,13 @@
-/* Global */
+/* General */
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f5f7fa;
-  color: #333;
-  scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+}
+
+h1, h2 {
+  margin: 0;
 }
 
 /* Header with Himalayas background */
@@ -18,17 +21,17 @@ header {
   justify-content: center;
 }
 
-/* Overlay */
+/* Gradient overlay */
 .header-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 31, 84, 0.5);
+  background: linear-gradient(to right, #001f54, #87ceeb);
+  opacity: 0.7;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Header Content */
 .header-content {
   text-align: center;
   color: white;
@@ -36,12 +39,11 @@ header {
 }
 
 .header-content h1 {
-  font-size: 3rem;
-  margin: 0;
+  font-size: 3.2rem;
 }
 
 .header-content .tagline {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 10px 0 20px;
   font-style: italic;
 }
@@ -58,111 +60,53 @@ header {
 }
 
 /* Sections */
-.section {
-  padding: 50px 20px;
-  max-width: 1000px;
-  margin: auto;
-  background: white;
-  border-radius: 12px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.overlay {
+  padding: 40px;
 }
 
-/* About */
-.about {
-  position: relative;
+.about, .vlogs, .contact {
+  margin-bottom: 50px;
 }
 
-.circle-decor {
-  position: absolute;
-  bottom: -40px;
-  right: 40px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: rgba(0, 191, 255, 0.2);
-  z-index: 0;
-}
-
-/* Vlog Gallery */
-.vlog-gallery {
+.vlog-container {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 30px;
 }
 
-.vlog-card {
+.vlog img {
   width: 300px;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  border: 4px solid yellow; /* Yellow border only */
   transition: transform 0.3s;
 }
 
-.vlog-card:hover {
-  transform: translateY(-5px);
+.vlog img:hover {
+  transform: scale(1.05);
 }
 
-.vlog-card img {
-  width: 100%;
-  border: 3px solid yellow;
-  border-radius: 8px;
-  filter: brightness(1.15) contrast(1.15);
-}
-
-.vlog-card h3 {
-  text-align: center;
-  padding: 10px;
-  margin: 0;
-  font-size: 1rem;
-}
-
-/* Subscribe */
 .subscribe {
-  text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .subscribe a {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #ff0000;
+  padding: 10px 20px;
+  background: #001f54;
   color: white;
-  font-weight: bold;
-  border-radius: 8px;
   text-decoration: none;
-  font-size: 1.1rem;
-  transition: background 0.3s;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .subscribe a:hover {
-  background: #cc0000;
-}
-
-/* Contact */
-.contact .social-links {
-  margin-top: 15px;
-}
-
-.contact .social-links a {
-  margin: 0 10px;
+  background: #87ceeb;
   color: #001f54;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
-.contact .social-links a:hover {
-  color: #87ceeb;
 }
 
 /* Footer */
 footer {
+  text-align: center;
+  padding: 20px;
   background: linear-gradient(to right, #001f54, #87ceeb);
   color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
 }
