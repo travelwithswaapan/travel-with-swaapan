@@ -1,106 +1,168 @@
-/* Reset */
-* {
+/* Global */
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Smooth scroll */
-html {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
   scroll-behavior: smooth;
-  font-family: Arial, sans-serif;
 }
 
-/* Hero Section */
-.hero {
+/* Header with Himalayas background */
+header {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  height: 350px;
+  background: url("https://images.unsplash.com/photo-1603189645238-fd3cdbd2a6bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
+  filter: brightness(1.2) contrast(1.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
-/* Hero background */
-.hero picture,
-.hero img.hero-bg {
+/* Overlay */
+.header-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(1.1) contrast(1.1); /* boost brightness & contrast */
-  z-index: -2;
-}
-
-/* Dark overlay */
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: -1;
-}
-
-/* Hero text */
-.hero-content {
-  color: #fff;
-  padding: 20px;
-}
-.hero-content h1 {
-  font-size: 3.2rem;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-}
-.hero-content p {
-  font-size: 1.4rem;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-}
-
-/* Section Styling */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-/* Vlog thumbnails */
-.vlog-list {
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 31, 84, 0.5);
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-}
-.vlog-list img {
-  width: 280px;
-  border: 4px solid yellow;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
-.vlog-list img:hover {
-  transform: scale(1.05);
 }
 
-/* Footer Gradient */
-.footer {
-  background: linear-gradient(to right, #003366, #66ccff);
+/* Header Content */
+.header-content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.header-content .tagline {
+  font-size: 1.3rem;
+  margin: 10px 0 20px;
+  font-style: italic;
+}
+
+.header-content nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header-content nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+.section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* About */
+.about {
+  position: relative;
+}
+
+.circle-decor {
+  position: absolute;
+  bottom: -40px;
+  right: 40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(0, 191, 255, 0.2);
+  z-index: 0;
+}
+
+/* Vlog Gallery */
+.vlog-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vlog-card {
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.vlog-card:hover {
+  transform: translateY(-5px);
+}
+
+.vlog-card img {
+  width: 100%;
+  border: 3px solid yellow;
+  border-radius: 8px;
+  filter: brightness(1.15) contrast(1.15);
+}
+
+.vlog-card h3 {
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Subscribe */
+.subscribe {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.subscribe a {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ff0000;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+}
+
+.subscribe a:hover {
+  background: #cc0000;
+}
+
+/* Contact */
+.contact .social-links {
+  margin-top: 15px;
+}
+
+.contact .social-links a {
+  margin: 0 10px;
+  color: #001f54;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.contact .social-links a:hover {
+  color: #87ceeb;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #001f54, #87ceeb);
   color: white;
   text-align: center;
   padding: 15px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .hero-content p {
-    font-size: 1rem;
-  }
-  .vlog-list img {
-    width: 90%;
-  }
+  font-size: 0.9rem;
 }
