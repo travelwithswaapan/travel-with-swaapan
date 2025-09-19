@@ -1,69 +1,70 @@
-/* General Styles */
+/* General Reset */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  text-align: center;
   background: #f9f9f9;
   color: #333;
+  text-align: center;
 }
 
+h1, h2, h3 {
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
 header {
-  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center center/cover;
-  height: 350px;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+  height: 400px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   color: white;
+  text-align: center;
 }
 
 .header-overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-.header-content {
-  padding: 20px;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin: 0;
+.header-content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
 .tagline {
-  font-size: 1.2rem;
-  margin: 10px 0;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 nav a {
   margin: 0 15px;
-  color: #fff;
-  text-decoration: none;
+  color: white;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #ffcc00;
 }
 
-/* Travel Photo Section with Slideshow */
+/* Travel Photo Slideshow */
 .travel-photo {
   width: 100%;
   height: 400px;
+  position: relative;
   overflow: hidden;
-  position: relative;
-}
-
-.travel-photo .slideshow {
-  width: 100%;
-  height: 100%;
-  position: relative;
+  margin: 20px 0;
 }
 
 .travel-photo .slideshow img {
@@ -81,104 +82,97 @@ nav a:hover {
   opacity: 1;
 }
 
-/* Sections */
-.section {
-  padding: 40px 20px;
-}
-
+/* About Section */
 .about {
+  padding: 40px 20px;
   background: #fff;
 }
 
+.about h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
 /* Vlogs Section */
+.vlogs {
+  padding: 40px 20px;
+  background: #f2f2f2;
+}
+
 .vlog-gallery {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .vlog-card {
-  position: relative;
-  text-align: center;
-  transition: transform 0.3s ease;
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-.vlog-card a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  position: relative;
+.vlog-card:hover {
+  transform: scale(1.05);
 }
 
 .vlog-card img {
   width: 100%;
-  max-width: 320px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-/* YouTube-style Play button */
-.vlog-card a::after {
-  content: "▶";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  color: white;
-  width: 60px;
-  height: 60px;
-  background: red;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.6);
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-.vlog-card:hover img {
-  transform: scale(1.05);
+  display: block;
 }
 
 .vlog-card h3 {
-  margin-top: 10px;
-  font-size: 1.1rem;
+  padding: 10px;
+  font-size: 18px;
+  color: #444;
+}
+
+/* Subscribe Button */
+.subscribe {
+  margin-top: 20px;
 }
 
 .subscribe a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #cc0000;
+  background: red;
   color: white;
-  border-radius: 5px;
-  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
 .subscribe a:hover {
-  background: #ff0000;
+  background: #cc0000;
 }
 
-/* Contact */
+/* Contact Section */
+.contact {
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
 .social-links a {
   margin: 0 10px;
-  color: #0077cc;
-  text-decoration: none;
   font-weight: bold;
+  color: #0066cc;
+  transition: color 0.3s;
 }
 
 .social-links a:hover {
-  text-decoration: underline;
+  color: #003366;
 }
 
 /* Footer */
 footer {
   background: #222;
-  color: #fff;
+  color: white;
   padding: 15px;
-  font-size: 0.9rem;
+  margin-top: 20px;
 }
