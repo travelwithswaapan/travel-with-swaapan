@@ -4,96 +4,93 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel with Swaapan</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('your-wallpaper.jpg') no-repeat center center/cover;
-      color: #fff;
-      text-align: center;
-    }
-
-    header {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 2rem;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin: 0.5rem 0 0;
-    }
-
-    .section-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding: 3rem 1rem;
-    }
-
-    .box {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 2rem;
-      width: 300px;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-
-    .box:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.6);
-      background: rgba(255, 255, 255, 0.15);
-    }
-
-    .box h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #ff4444;
-    }
-
-    .box p {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    footer {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>Travel with Swaapan</h1>
-    <p>Explore journeys, yatras, and adventures with me</p>
+    <div class="logo">Travel with Swaapan</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#vlogs">My Vlogs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="section-container">
-    <div class="box">
-      <h2>About Me</h2>
-      <p>Hello! I’m Swapan, a passionate traveler and storyteller. I love sharing my journey through spiritual yatras, train rides, and hidden gems of India.</p>
+  <!-- Slideshow -->
+  <section class="slideshow">
+    <div class="slides fade">
+      <img src="img1.jpg" alt="Travel Image 1">
     </div>
-
-    <div class="box">
-      <h2>My Latest Vlogs</h2>
-      <p>✨ Mathura Yatra <br> ✨ Khatu Shyam Ji Darshan <br> ✨ Vande Bharat Train Journey <br> Stay tuned for more adventures!</p>
+    <div class="slides fade">
+      <img src="img2.jpg" alt="Travel Image 2">
     </div>
-
-    <div class="box">
-      <h2>Contact Me</h2>
-      <p>Email: travelwithswaapan@gmail.com <br> YouTube: Travel with Swaapan <br> Let’s connect and share our travel stories!</p>
+    <div class="slides fade">
+      <img src="img3.jpg" alt="Travel Image 3">
     </div>
   </section>
 
+  <!-- About Me Section -->
+  <section id="about" class="section about">
+    <div class="section-box about-content">
+      <h2>About Me</h2>
+      <p>Hello! I’m <strong>Swaapan</strong>, a travel vlogger exploring holy places, treks, and unique journeys across India.  
+      Join me as I take you on <em>spiritual yatras</em>, <em>adventurous treks</em>, and <em>memorable train journeys</em> 🚆🏔️🙏</p>
+    </div>
+  </section>
+
+  <!-- My Latest Vlogs -->
+  <section id="vlogs" class="section vlogs">
+    <div class="section-box">
+      <h2>My Latest Vlogs</h2>
+      <div class="vlog-gallery">
+        <div class="vlog-card"><img src="vlog1.jpg" alt="Vlog 1"></div>
+        <div class="vlog-card"><img src="vlog2.jpg" alt="Vlog 2"></div>
+        <div class="vlog-card"><img src="vlog3.jpg" alt="Vlog 3"></div>
+      </div>
+      <div class="subscribe">
+        <a href="https://www.youtube.com/@TravelwithSwaapan" target="_blank" class="youtube-btn">Subscribe on YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me -->
+  <section id="contact" class="section contact">
+    <div class="section-box">
+      <h2>Contact Me</h2>
+      <p>Follow me on my social media:</p>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    © 2025 Travel with Swaapan | All Rights Reserved
+    <p>© 2025 Travel with Swaapan | All Rights Reserved</p>
   </footer>
+
+  <!-- Slideshow Script -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 4000);
+    }
+  </script>
+
 </body>
 </html>
