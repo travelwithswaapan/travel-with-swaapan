@@ -1,166 +1,62 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('your-wallpaper.jpg') no-repeat center center/cover;
+  color: #fff;
   text-align: center;
 }
 
-/* Header with wallpaper */
 header {
-  position: relative;
-  height: 100vh;
-  background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470") no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header-overlay {
-  background: rgba(0,0,0,0.5);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header-content {
-  max-width: 800px;
-  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
 }
 
 header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
-header .tagline {
+header p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin: 0.5rem 0 0;
 }
 
-nav a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* About Me inside header */
-.about-me-intro {
-  margin-top: 30px;
-  background: rgba(255,255,255,0.15);
-  padding: 20px;
-  border-radius: 12px;
-  color: #fff;
-}
-
-/* Travel Photo Slideshow */
-.slideshow {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-}
-
-.slideshow img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.slideshow img.active {
-  opacity: 1;
-}
-
-/* Sections */
-.section {
-  padding: 60px 20px;
-}
-
-.vlogs .vlog-gallery {
+.section-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 1rem;
 }
 
-.vlog-card {
+.box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
   width: 300px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.vlog-card:hover {
-  transform: scale(1.05);
+.box:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+  background: rgba(255, 255, 255, 0.15);
 }
 
-.vlog-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+.box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ff4444;
 }
 
-.vlog-card h3 {
-  padding: 10px;
+.box p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-.subscribe a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: red;
-  color: #fff;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.subscribe a:hover {
-  background: darkred;
-}
-
-/* Contact */
-.social-links {
-  margin-top: 15px;
-}
-
-.social-links a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.social-links a:hover {
-  color: #0077cc;
-}
-
-/* Footer */
 footer {
-  background: #222;
-  color: #fff;
-  padding: 15px 0;
-  margin-top: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  font-size: 0.9rem;
 }
