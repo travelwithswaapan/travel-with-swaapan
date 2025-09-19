@@ -1,167 +1,184 @@
-/* General */
+/* General Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #333;
+  line-height: 1.6;
   text-align: center;
+  background: #f9f9f9;
+  color: #333;
 }
 
-/* Header */
 header {
-  background: #cc0000;
-  color: white;
-  padding: 15px 20px;
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center center/cover;
+  height: 350px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
+  justify-content: center;
+  position: relative;
   color: white;
+}
+
+.header-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content {
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav ul li a:hover {
+nav a:hover {
   text-decoration: underline;
 }
 
-/* Slideshow */
-.slideshow {
-  position: relative;
-  max-width: 100%;
+/* Travel Photo Section with Slideshow */
+.travel-photo {
+  width: 100%;
   height: 400px;
   overflow: hidden;
+  position: relative;
 }
 
-.slides img {
+.travel-photo .slideshow {
   width: 100%;
-  height: 400px;
+  height: 100%;
+  position: relative;
+}
+
+.travel-photo .slideshow img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
-.fade {
-  animation: fade 1.5s ease-in-out;
+.travel-photo .slideshow img.active {
+  opacity: 1;
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/* Section Layout */
+/* Sections */
 .section {
   padding: 40px 20px;
-  display: flex;
-  justify-content: center;
 }
 
-/* Stylish Box */
-.section-box {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 15px;
-  padding: 30px;
-  max-width: 900px;
-  width: 100%;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  text-align: center;
+.about {
+  background: #fff;
 }
 
-.section-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
-  background: rgba(255, 255, 255, 1);
-}
-
-/* Section Headings */
-.section-box h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #cc0000;
-}
-
-/* About Text */
-.about-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Vlogs */
+/* Vlogs Section */
 .vlog-gallery {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
 }
 
-.vlog-card img {
-  border-radius: 10px;
-  width: 250px;
-  height: 150px;
-  object-fit: cover;
+.vlog-card {
+  position: relative;
+  text-align: center;
   transition: transform 0.3s ease;
 }
 
-.vlog-card img:hover {
+.vlog-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.vlog-card img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+/* YouTube-style Play button */
+.vlog-card a::after {
+  content: "▶";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  width: 60px;
+  height: 60px;
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.vlog-card:hover img {
   transform: scale(1.05);
 }
 
-/* YouTube Button */
-.youtube-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: red;
-  color: white;
-  font-weight: bold;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: background 0.3s;
+.vlog-card h3 {
+  margin-top: 10px;
+  font-size: 1.1rem;
 }
 
-.youtube-btn:hover {
-  background: darkred;
+.subscribe a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #cc0000;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.subscribe a:hover {
+  background: #ff0000;
 }
 
 /* Contact */
 .social-links a {
-  margin: 0 15px;
+  margin: 0 10px;
   color: #0077cc;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
 }
 
 .social-links a:hover {
-  color: #004488;
+  text-decoration: underline;
 }
 
 /* Footer */
 footer {
   background: #222;
-  color: white;
+  color: #fff;
   padding: 15px;
-  margin-top: 20px;
+  font-size: 0.9rem;
 }
