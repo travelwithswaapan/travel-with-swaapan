@@ -176,3 +176,15 @@ footer {
   padding: 15px;
   margin-top: 20px;
 }
+/* Special styling for section titles */
+.about h2,
+.vlogs h2,
+.contact h2 {
+  color: #ff4500;              /* Orange-red color (you can change to any hex code) */
+  font-family: 'Georgia', serif; /* Elegant serif font (can replace with Google Fonts) */
+  font-size: 2rem;             /* Slightly bigger */
+  text-transform: uppercase;   /* Make it uppercase */
+  letter-spacing: 2px;         /* Add spacing between letters */
+  text-align: center;          /* Keep it centered */
+  margin-bottom: 20px;
+}
