@@ -4,103 +4,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel with Swaapan</title>
-  <meta name="description" content="Travel with Swaapan - Explore spiritual yatras, trekking adventures, and train journeys across India with me.">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- Header with Wallpaper + About Me -->
-  <header>
-    <div class="header-overlay">
-      <div class="header-content">
-        <h1>🌍 Travel with Swaapan </h1>
-        <p class="tagline">Explore spiritual yatras, trekking adventures, and train journeys across India & beyond with me.</p>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#vlogs">Vlogs</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <!-- About Me inside wallpaper -->
-        <div id="about" class="about-me-intro">
-          <h2>About Me</h2>
-          <p>Hello! I’m <strong>Swaapan</strong>, a travel vlogger exploring holy places, treks, and unique journeys across India.  
-          Join me as I take you on <em>spiritual yatras</em>, <em>adventurous treks</em>, and <em>memorable train journeys</em> 🚆🏔️🙏</p>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Travel Photo Section (Slideshow) -->
-  <section class="travel-photo">
-    <div class="slideshow">
-      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Travel Photo 1">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Travel Photo 2">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Travel Photo 3">
-    </div>
-  </section>
-
-  <!-- Vlogs -->
-  <section id="vlogs" class="section vlogs">
-    <h2>My Latest Vlogs</h2>
-    <div class="vlog-gallery">
-      <div class="vlog-card">
-        <a href="https://youtu.be/ypp7UclZRfY" target="_blank">
-          <img src="https://img.youtube.com/vi/ypp7UclZRfY/hqdefault.jpg" alt="Mata Vaishno Devi Yatra">
-          <h3>Mata Vaishno Devi Yatra</h3>
-        </a>
-      </div>
-      <div class="vlog-card">
-        <a href="https://youtu.be/7JRxc9lEZHQ" target="_blank">
-          <img src="https://img.youtube.com/vi/7JRxc9lEZHQ/hqdefault.jpg" alt="New Delhi to Katra Vande Bharat Express">
-          <h3>Delhi to Katra Vande Bharat Journey</h3>
-        </a>
-      </div>
-      <div class="vlog-card">
-        <a href="https://youtu.be/9sfkoRMtn6A" target="_blank">
-          <img src="https://img.youtube.com/vi/9sfkoRMtn6A/hqdefault.jpg" alt="Kedarnath Trek">
-          <h3>Kedarnath Trek</h3>
-        </a>
-      </div>
-    </div>
-    <div class="subscribe">
-      <a href="https://www.youtube.com/@TravelWithSwaapan?sub_confirmation=1" target="_blank">📺 Subscribe on YouTube</a>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section contact">
-    <h2>Contact Me</h2>
-    <p>Follow me on my social media:</p>
-    <div class="social-links">
-      <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=fujonlb" target="_blank">Instagram</a>
-      <a href="https://facebook.com/TWS29" target="_blank">Facebook</a>
-      <a href="https://whatsapp.com/channel/0029Va5ggY28fewmEtAadj1i" target="_blank">WhatsApp</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Travel with Swaapan | Made with ❤️ for travelers</p>
-  </footer>
-
-  <!-- Slideshow Script -->
-  <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slideshow img');
-
-    function showSlides() {
-      slides.forEach((img) => img.classList.remove('active'));
-      slideIndex = (slideIndex + 1) % slides.length;
-      slides[slideIndex].classList.add('active');
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('your-wallpaper.jpg') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
     }
 
-    // Initialize first slide
-    slides[0].classList.add('active');
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+    }
 
-    // Change image every 4 seconds
-    setInterval(showSlides, 4000);
-  </script>
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0;
+    }
+
+    .section-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 3rem 1rem;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 2rem;
+      width: 300px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .box:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #ff4444;
+    }
+
+    .box p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Travel with Swaapan</h1>
+    <p>Explore journeys, yatras, and adventures with me</p>
+  </header>
+
+  <section class="section-container">
+    <div class="box">
+      <h2>About Me</h2>
+      <p>Hello! I’m Swapan, a passionate traveler and storyteller. I love sharing my journey through spiritual yatras, train rides, and hidden gems of India.</p>
+    </div>
+
+    <div class="box">
+      <h2>My Latest Vlogs</h2>
+      <p>✨ Mathura Yatra <br> ✨ Khatu Shyam Ji Darshan <br> ✨ Vande Bharat Train Journey <br> Stay tuned for more adventures!</p>
+    </div>
+
+    <div class="box">
+      <h2>Contact Me</h2>
+      <p>Email: travelwithswaapan@gmail.com <br> YouTube: Travel with Swaapan <br> Let’s connect and share our travel stories!</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Travel with Swaapan | All Rights Reserved
+  </footer>
 </body>
 </html>
